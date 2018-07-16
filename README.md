@@ -1,15 +1,15 @@
 # RedditOnRails
 
-RedditOnRails 5.1 is an open source project, that
+RedditOnRails 5.2 is an open source project, that
 uses core mechanics together with a few gems in order to
-achieve a almost production ready Reddit Clone.
+achieve a full working application.
 
 
-* Rails version: 5.1.9
+* Rails version: 5.2.0
 
-* System dependencies
+* DB: Sqlite3
 
-* Configuration
+* Ruby version: 2.4.2p198
 
 * Database creation
 
