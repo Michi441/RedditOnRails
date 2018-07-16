@@ -1,0 +1,21 @@
+<li>
+  <%= comment.comment %> -
+  <small>Submitted <%= time_ago_in_words(comment.created_at) %> ago
+    <% if user_signed_in? && comment.user == current_user %>
+    - <%= link_to "Delete", comment_path(comment, @submmision), method: :delete, data: { confirm: 'Are you sure?'} %>
+    <% end %>
+    <% if !comment.user.nil? %>
+    - <%= comment.user.email %>
+    <% end %>
+  </small>
+
+  <%= form_for [comment, Comment.new] do |f| %>
+      <%= f.text_area :comment, placeholder: "Add a Reply" %><br/>
+      <%= f.submit "Reply"  %>
+      <% end %>
+
+  <ul>
+      <%= render partial: 'comments/comment', collection: comment.comments %>
+  </ul>
+
+</li>

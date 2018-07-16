@@ -1,0 +1,28 @@
+<h1>Submissions#show</h1>
+
+<p>Find me in app/views/submissions/show.html.erb</p>
+
+
+<%= @submission.title %>
+<%= @submission.content %>
+
+
+<h1>
+<%= @submission.liked_by current_user %>
+<%= @submission.liked_by User.last %>
+<%= @submission.get_likes.size %>
+</h1>
+
+<h3>Comments</h3>
+
+<%= form_for [@submission, Comment.new] do |f| %>
+<%= f.text_area :comment, placeholder: "Add a comment" %><br/>
+<%= f.submit "Add Comment" %>
+<% end %>
+
+<ul>
+  <%= render(partial: 'comments/comment', collection: @submission.comments) %>
+</ul>
+
+
+<%= link_to "Back", root_path %>
