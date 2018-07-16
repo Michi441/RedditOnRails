@@ -1,11 +1,11 @@
-# README
+# RedditOnRails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+RedditOnRails 5.1 is an open source project, that
+uses core mechanics together with a few gems in order to
+achieve a almost production ready Reddit Clone.
 
-Things you may want to cover:
 
-* Ruby version
+* Rails version: 5.1.9
 
 * System dependencies
 
